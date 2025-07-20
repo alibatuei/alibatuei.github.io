@@ -1,0 +1,132 @@
+/* --- Global Styles & Typography --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0; 
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #34495e;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #e0e0e0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* --- Layout & Structure --- */
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* --- Accordion Styles --- */
+.grammar-point.accordion {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grammar-point.accordion:hover, .grammar-point.accordion.active {
+    background-color: #f5faff; /* Light blue tint on hover/active */
+}
+
+.accordion-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.accordion-header .icon {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3498db;
+    transition: transform 0.3s ease;
+}
+
+.grammar-point.accordion.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    padding: 0 25px;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.grammar-point.accordion.active .accordion-content {
+    padding: 0 25px 20px 25px; /* Add padding back when active */
+}
+
+.accordion-content ul {
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.accordion-content strong {
+    color: #34495e;
+}
